@@ -1,0 +1,1305 @@
+@import url('https://fonts.googleapis.com/css2?family=Isometra&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+
+/* Reset global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/***************************************************************************************************/
+/* 1. Fondo de la pantalla general */
+body {
+    background-color: #f8f6f7;
+    background-image: url('https://res.cloudinary.com/zi6xga1d/image/upload/v1791413503/background_Body_2.webp');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+    /* Fija la imagen a la ventana para que no se corte al hacer scroll */
+    min-height: 100vh;
+    /* Cubre el 100% de la altura de la pantalla */
+    margin: 0;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*La tarjeta flotante (Contenedor principal) */
+.page-card {
+    width: 90%;
+    max-width: 1200px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+/***************************************************************************************************/
+/* Navbar */
+.navbar {
+    background-color: #1a291f;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1.5rem;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Sección Izquierda */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icon-truck {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.delivery-text {
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-right: 15px;
+}
+
+/* Sección Derecha */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    background-color: #2e4435;
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+
+/* Contenedor de íconos */
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+/* Íconos de Usuario y Carrito */
+.icon-link {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+    transition: opacity 0.2s ease;
+}
+
+.icon-link:hover {
+    opacity: 0.85;
+}
+
+.icon-link svg {
+    width: 20px;
+    height: 20px;
+}
+
+.cart-icon .badge {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    background-color: #e65c83;
+    color: #ffffff;
+    font-size: 0.65rem;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Botón Hamburguesa para móviles */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 19px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+.menu-toggle .bar {
+    width: 100%;
+    height: 2.5px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/******************** Hero / Container ***************************************/
+.container {
+    background-image: url('https://res.cloudinary.com/zi6xga1d/image/upload/v1791301306/background2.webp');
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 8%;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.hero-content {
+    max-width: 480px;
+}
+
+.hero-content .subtitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #e07a93;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    line-height: 1.15;
+    color: #1a1a1a;
+    margin: 0 0 16px 0;
+    font-weight: 400;
+}
+
+.hero-content h1 span {
+    color: #d65b7a;
+}
+
+.hero-content .description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #555555;
+    margin-bottom: 24px;
+}
+
+.hero-content .btn {
+    display: inline-block;
+    background-color: #3b5238;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 24px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-content .btn:hover {
+    background-color: #2b3d29;
+}
+
+.container div h1 {
+    font-size: 2.5rem;
+    font-family: "Roboto", sans-serif;
+}
+
+.container div h3 {
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+}
+
+/********************** Items Section / Features ************************************/
+.features-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px 10px;
+    margin: 20px auto;
+    border-radius: 12px;
+    max-width: 1100px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.feature-icon {
+    width: 32px;
+    height: 32px;
+    stroke: #d96b86;
+    flex-shrink: 0;
+}
+
+.feature-text h4 {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.feature-text p {
+    font-size: 0.75rem;
+    color: #777777;
+    margin: 2px 0 0 0;
+}
+
+/***************************** Cards Section **********************************/
+.cards-section {
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card-container {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    background-color: #fcf8f8;
+    border-radius: 12px;
+    padding: 10px 10px;
+    width: 200px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.card img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+.card-content h3 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    color: #333;
+}
+
+.card-content p {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.85rem;
+    color: #333;
+    line-height: 1.5;
+    margin: 4px 0 0 0;
+    cursor: pointer;
+}
+
+.card-btn {
+    padding: .6rem 1.2rem;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card-btn:hover {
+    background-color: #777;
+}
+
+/**************** Header & Categories Grid ******************/
+.cards-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 1100px;
+    margin: 30px auto 10px;
+    padding: 0 10px;
+    width: 100%;
+}
+
+.cards-title {
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    color: #000000;
+    display: block;
+    letter-spacing: -1px;
+    margin-bottom: -10px;
+    position: relative;
+    z-index: 2;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 10px;
+}
+
+.category-card {
+    background-color: #f7f3f5;
+    border-radius: 16px;
+    padding: 20px 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.category-card img {
+    max-width: 100%;
+    width: auto;
+    height: 160px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.product-title {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    color: #000000;
+    margin: 0;
+    font-weight: 600;
+}
+
+.title-underline {
+    width: 35px;
+    height: 2px;
+    background-color: #e8a0a8;
+    margin: 5px 0 7px 0;
+    display: block;
+}
+
+.product-price {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    color: #000000;
+    margin: 0;
+}
+
+
+/************************************Contact***************************************/
+/* Secciones de la página de contacto */
+.contact-section {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Tarjetas de información rápida */
+.contact-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.contact-card {
+    background-color: #fcf8f8;
+    border-radius: 12px;
+    padding: 24px;
+    flex: 1;
+    min-width: 240px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+}
+
+.contact-icon {
+    width: 32px;
+    height: 32px;
+    stroke: #d65b7a;
+    margin-bottom: 12px;
+}
+
+.contact-card h3 {
+    font-size: 1.1rem;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.contact-card p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Contenedor principal: Formulario + Mapa */
+.contact-main-wrapper {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.form-container {
+    flex: 1.2;
+    min-width: 300px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid #f0e6e8;
+}
+
+.form-title {
+    font-size: 1.4rem;
+    color: #1a291f;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 6px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    border-color: #d65b7a;
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: #3b5238;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #2b3d29;
+}
+
+/* Mapa / Información adicional */
+.map-container {
+    flex: 1;
+    min-width: 300px;
+    height: 100%;
+}
+
+.map-frame {
+    width: 100%;
+    height: 380px;
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/************************About********************************************/
+/* Estilos para la sección de About Us */
+.about-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.about-title {
+    font-size: 1.8rem;
+    color: #1a1a1a;
+    margin-bottom: 30px;
+}
+
+.about-cards-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-card {
+    background-color: #fcf8f8;
+    padding: 25px;
+    border-radius: 12px;
+    flex: 1;
+    min-width: 280px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    text-align: left;
+}
+
+.about-card-title {
+    color: #d65b7a;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.about-card-text {
+    color: #555555;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Sección Por Qué Elegirnos */
+.why-us-section {
+    background-color: #faf6f7;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.why-us-title {
+    font-size: 1.6rem;
+    color: #1a1a1a;
+    margin-bottom: 30px;
+}
+
+.why-us-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.why-us-item {
+    flex: 1;
+    min-width: 200px;
+    padding: 15px;
+}
+
+.why-us-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.why-us-item-title {
+    color: #1a291f;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.why-us-item-text {
+    color: #777777;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+/* Sección CTA Final */
+.cta-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.cta-title {
+    font-size: 1.4rem;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.btn-cta {
+    display: inline-block;
+    background-color: #3b5238;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 28px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-cta:hover {
+    background-color: #2b3d29;
+}
+
+/***************************************************************************************************/
+/* MEDIA QUERIES - DISEÑO RESPONSIVE */
+/***************************************************************************************************/
+
+/* ==========================================================================
+   1. Breakpoint: Laptops pequeños y Tablets Horizontales (max-width: 992px)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .page-card {
+        width: 94%;
+    }
+
+    .container {
+        padding-left: 6%;
+        min-height: 44vh;
+    }
+
+    .hero-content {
+        max-width: 440px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.3rem;
+    }
+
+    /* Barra de beneficios en 2x2 */
+    .features-bar {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 22px 24px;
+        margin: 20px 15px;
+    }
+
+    .feature-item {
+        justify-content: flex-start;
+    }
+
+    /* Cuadrícula de categorías en 3 columnas */
+    .categories-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        padding: 0 15px;
+    }
+
+    .category-card img {
+        height: 150px;
+    }
+
+    /* Contacto */
+    .contact-main-wrapper {
+        gap: 24px;
+    }
+}
+
+/* ==========================================================================
+   2. Breakpoint: Tablets Verticales y Móviles Grandes (max-width: 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+    body {
+        padding: 10px 0;
+        background-attachment: scroll;
+    }
+
+    .page-card {
+        width: 95%;
+        border-radius: 16px;
+    }
+
+    /* Header y Navegación Responsive */
+    .navbar {
+        flex-wrap: wrap;
+        padding: 12px 16px;
+        gap: 10px;
+    }
+
+    .nav-left {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        padding-bottom: 8px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        order: 1;
+    }
+
+    .delivery-text {
+        font-size: 0.8rem;
+        margin-right: 0;
+    }
+
+    .nav-right {
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        order: 2;
+    }
+
+    /* Mostrar botón hamburguesa */
+    .menu-toggle {
+        display: flex;
+        order: 2;
+    }
+
+    .nav-icons {
+        order: 1;
+        gap: 16px;
+    }
+
+    /* Menú desplegable en móvil */
+    .navbar ul.nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #152219;
+        margin-top: 10px;
+        padding: 14px 10px;
+        border-radius: 10px;
+        gap: 8px;
+        order: 3;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+        animation: slideDownNav 0.28s ease forwards;
+    }
+
+    .navbar ul.nav.active {
+        display: flex;
+    }
+
+    .navbar ul.nav li {
+        width: 100%;
+    }
+
+    .navbar ul.nav li a {
+        display: block;
+        padding: 10px 16px;
+        font-size: 1rem;
+        border-radius: 6px;
+        text-align: center;
+        width: 100%;
+    }
+
+    @keyframes slideDownNav {
+        from {
+            opacity: 0;
+            transform: translateY(-8px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Hero / Banner Principal */
+    .container {
+        padding: 40px 24px;
+        min-height: auto;
+        justify-content: flex-start;
+        background-image: linear-gradient(
+                to right,
+                rgba(255, 255, 255, 0.94) 0%,
+                rgba(255, 255, 255, 0.88) 60%,
+                rgba(255, 255, 255, 0.5) 100%
+            ),
+            url('https://res.cloudinary.com/zi6xga1d/image/upload/v1791301306/background2.webp');
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+        line-height: 1.25;
+        margin-bottom: 12px;
+    }
+
+    .hero-content .subtitle {
+        font-size: 0.72rem;
+        letter-spacing: 1.2px;
+    }
+
+    .hero-content .description {
+        font-size: 0.92rem;
+        margin-bottom: 20px;
+        max-width: 90%;
+    }
+
+    .hero-content .btn {
+        padding: 12px 26px;
+        font-size: 0.8rem;
+    }
+
+    .container div h1 {
+        font-size: 2rem;
+    }
+
+    .container div h3 {
+        font-size: 1.25rem;
+    }
+
+    /* Tarjetas de ocasión rápida */
+    .cards-section {
+        padding: 15px 12px;
+    }
+
+    .card-container {
+        gap: 12px;
+    }
+
+    .card {
+        flex: 1 1 calc(50% - 12px);
+        min-width: 150px;
+        width: auto;
+        max-width: none;
+        padding: 10px;
+    }
+
+    .card img {
+        width: 75px;
+        height: 75px;
+    }
+
+    /* Cuadrícula de Productos */
+    .cards-header {
+        margin: 24px auto 10px;
+        padding: 0 16px;
+    }
+
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+        margin: 20px auto;
+        padding: 0 14px;
+    }
+
+    .category-card {
+        padding: 16px 10px;
+    }
+
+    .category-card img {
+        height: 135px;
+    }
+
+    /* Sección Contacto */
+    .contact-section {
+        padding: 30px 16px;
+    }
+
+    .contact-grid {
+        gap: 16px;
+        margin-bottom: 28px;
+    }
+
+    .contact-card {
+        min-width: 200px;
+        padding: 20px 16px;
+    }
+
+    .contact-main-wrapper {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .form-container,
+    .map-container {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .form-container {
+        padding: 24px 20px;
+    }
+
+    .map-frame {
+        height: 300px;
+    }
+
+    /* Sección About */
+    .about-section {
+        padding: 30px 16px;
+    }
+
+    .about-title {
+        font-size: 1.5rem;
+        margin-bottom: 24px;
+    }
+
+    .about-cards-container {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .about-card {
+        min-width: 0;
+        padding: 20px 18px;
+    }
+
+    .why-us-section {
+        padding: 30px 16px;
+    }
+
+    .why-us-title {
+        font-size: 1.4rem;
+        margin-bottom: 24px;
+    }
+
+    .why-us-grid {
+        gap: 16px;
+    }
+
+    .why-us-item {
+        min-width: 160px;
+    }
+
+    .cta-section {
+        padding: 32px 18px;
+    }
+}
+
+/* ==========================================================================
+   3. Breakpoint: Teléfonos Móviles (max-width: 576px)
+   ========================================================================== */
+@media (max-width: 576px) {
+    body {
+        padding: 0;
+    }
+
+    .page-card {
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .navbar {
+        border-radius: 0;
+        padding: 8px 12px;
+    }
+
+    .delivery-text {
+        font-size: 0.75rem;
+    }
+
+    /* Hero */
+    .container {
+        padding: 32px 16px;
+        background-image: linear-gradient(
+                rgba(255, 255, 255, 0.9),
+                rgba(255, 255, 255, 0.9)
+            ),
+            url('https://res.cloudinary.com/zi6xga1d/image/upload/v1791301306/background2.webp');
+    }
+
+    .hero-content h1 {
+        font-size: 1.7rem;
+        line-height: 1.25;
+    }
+
+    .hero-content .subtitle {
+        font-size: 0.68rem;
+        letter-spacing: 1px;
+    }
+
+    .hero-content .description {
+        font-size: 0.88rem;
+        max-width: 100%;
+    }
+
+    .hero-content .btn {
+        width: 100%;
+        text-align: center;
+        padding: 12px 16px;
+    }
+
+    /* Features bar en 1 columna */
+    .features-bar {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin: 14px 10px;
+        padding: 16px 14px;
+        border: 1px solid #f2e6e9;
+    }
+
+    .feature-item {
+        gap: 12px;
+    }
+
+    .feature-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .feature-text h4 {
+        font-size: 0.85rem;
+    }
+
+    .feature-text p {
+        font-size: 0.73rem;
+    }
+
+    /* Tarjetas de ocasión rápida: ancho completo */
+    .cards-section {
+        padding: 8px 10px;
+    }
+
+    .card {
+        flex: 1 1 100%;
+        width: 100%;
+        max-width: 100%;
+        padding: 10px 12px;
+    }
+
+    .card img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .card-content h3 {
+        font-size: 0.95rem;
+    }
+
+    .card-content p {
+        font-size: 0.8rem;
+    }
+
+    /* Categorías */
+    .cards-header {
+        padding: 0 12px;
+        margin: 18px auto 6px;
+    }
+
+    .cards-title {
+        font-size: 0.9rem;
+    }
+
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 0 10px;
+        margin: 14px auto;
+    }
+
+    .category-card {
+        padding: 12px 6px;
+        border-radius: 12px;
+    }
+
+    .category-card img {
+        height: 110px;
+        margin-bottom: 8px;
+    }
+
+    .product-title {
+        font-size: 0.82rem;
+    }
+
+    .title-underline {
+        width: 24px;
+        margin: 4px 0 6px 0;
+    }
+
+    .product-price {
+        font-size: 0.82rem;
+    }
+
+    /* Contacto en móvil */
+    .contact-section {
+        padding: 20px 12px;
+    }
+
+    .contact-grid {
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .contact-card {
+        width: 100%;
+        min-width: 0;
+        padding: 16px 12px;
+    }
+
+    .contact-card h3 {
+        font-size: 1rem;
+    }
+
+    .contact-card p {
+        font-size: 0.85rem;
+    }
+
+    .form-container {
+        padding: 18px 12px;
+        border-radius: 12px;
+    }
+
+    .form-title {
+        font-size: 1.15rem;
+        margin-bottom: 16px;
+    }
+
+    .form-control {
+        padding: 10px;
+        font-size: 0.88rem;
+    }
+
+    .btn-submit {
+        padding: 12px;
+        font-size: 0.85rem;
+    }
+
+    .map-frame {
+        height: 240px;
+        border-radius: 12px;
+    }
+
+    /* About en móvil */
+    .about-section {
+        padding: 20px 12px;
+    }
+
+    .about-title {
+        font-size: 1.35rem;
+        margin-bottom: 18px;
+    }
+
+    .about-card {
+        padding: 16px 12px;
+        border-radius: 10px;
+    }
+
+    .about-card-title {
+        font-size: 1.05rem;
+    }
+
+    .about-card-text {
+        font-size: 0.88rem;
+    }
+
+    .why-us-section {
+        padding: 20px 12px;
+    }
+
+    .why-us-title {
+        font-size: 1.25rem;
+        margin-bottom: 18px;
+    }
+
+    .why-us-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .why-us-item {
+        width: 100%;
+        min-width: 0;
+        padding: 8px;
+    }
+
+    .why-us-icon {
+        font-size: 2rem;
+    }
+
+    .cta-section {
+        padding: 22px 12px;
+    }
+
+    .cta-title {
+        font-size: 1.15rem;
+    }
+
+    .btn-cta {
+        padding: 10px 22px;
+        font-size: 0.8rem;
+        width: 100%;
+        max-width: 260px;
+    }
+}
+
+/* ==========================================================================
+   4. Breakpoint: Pantallas Extra Pequeñas (max-width: 360px)
+   ========================================================================== */
+@media (max-width: 360px) {
+    .delivery-text {
+        font-size: 0.7rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-card img {
+        height: 130px;
+    }
+}

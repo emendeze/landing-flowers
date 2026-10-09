@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="page-card">
+        <nav class="navbar">
+            <div class="nav-left">
+                <svg class="icon-truck" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5-1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5-1.5z" />
+                </svg>
+                <span class="delivery-text">Envío gratis en pedidos superiores a 50</span>
+            </div>
+
+            <div class="nav-right">
+                <ul class="nav" id="navMenu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+                <div class="nav-icons">
+                    <a href="#" class="icon-link" aria-label="Account">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </a>
+
+                    <a href="#" class="icon-link cart-icon" aria-label="Cart">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                        <span class="badge">1</span>
+                    </a>
+                </div>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </nav>
+
+        <main class="container">
+            <div class="hero-content">
+                <p class="subtitle">FRESH FLOWERS, MADE WITH LOVE</p>
+                <h1>Beautiful Flowers <br>for <span>Every Occasion</span></h1>
+                <p class="description">
+                    Flores seleccionadas a mano, arreglos espectaculares
+                    y entrega confiable en todo El Salvador.
+                </p>
+                <a href="#" class="btn">SHOP FLOWERS</a>
+            </div>
+        </main>
+
+        <section class="features-bar">
+            <div class="feature-item">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path
+                        d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5-1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5-1.5z" />
+                </svg>
+                <div class="feature-text">
+                    <h4>Same Day Delivery</h4>
+                    <p>Across Country</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                </svg>
+                <div class="feature-text">
+                    <h4>Fresh Guarantee</h4>
+                    <p>100% Fresh Flowers</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+                <div class="feature-text">
+                    <h4>Secure Payments</h4>
+                    <p>Safe & Encrypted</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67" />
+                </svg>
+                <div class="feature-text">
+                    <h4>Easy Returns</h4>
+                    <p>Hassle Free</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cards-section">
+            <div class="card-container">
+                <div class="card">
+                    <img src="https://res.cloudinary.com/zi6xga1d/image/upload/v1791297763/detalle.webp" alt="Bouquets">
+                    <div class="card-content">
+                        <h3>Birthday</h3>
+                        <p>Shop Now</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://res.cloudinary.com/zi6xga1d/image/upload/v1791297763/New_Baby.avif" alt="Roses">
+                    <div class="card-content">
+                        <h3>New Baby</h3>
+                        <p>Shop Now</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://res.cloudinary.com/zi6xga1d/image/upload/v1791297763/orquideas_elegant.webp"
+                        alt="Plants">
+                    <div class="card-content">
+                        <h3>Special</h3>
+                        <p>Shop Now</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://res.cloudinary.com/zi6xga1d/image/upload/f_auto/q_auto/Roses_Bouquet.jpg"
+                        alt="Plants">
+                    <div class="card-content">
+                        <h3>Roses</h3>
+                        <p>Shop Now</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://res.cloudinary.com/zi6xga1d/image/upload/v1791297764/tulips_Blancos.jpg"
+                        alt="Plants">
+                    <div class="card-content">
+                        <h3>Bouquets</h3>
+                        <p>Shop Now</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="cards-header">
+            <span class="cards-title">SHOP BY OCCASION</span>
+        </div>
+
+        <section class="categories-grid">
+            <div class="category-card">
+                <img src="https://res.cloudinary.com/zi6xga1d/image/upload/v1791297763/detalle.webp" alt="Bouquets">
+                <h3 class="product-title">BOUQUETS</h3>
+                <span class="title-underline"></span>
+                <p class="product-price">$85.00</p>
+            </div>
+            <div class="category-card">
+                <img src="https://res.cloudinary.com/zi6xga1d/image/upload/v1791297763/New_Baby.avif" alt="Roses">
+                <h3 class="product-title">BOUQUETS</h3>
+                <span class="title-underline"></span>
+                <p class="product-price">$85.00</p>
+            </div>
+            <div class="category-card">
+                <img src="https://res.cloudinary.com/zi6xga1d/image/upload/v1791297763/orquideas_elegant.webp"
+                    alt="Plants">
+                <h3 class="product-title">BOUQUETS</h3>
+                <span class="title-underline"></span>
+                <p class="product-price">$85.00</p>
+            </div>
+            <div class="category-card">
+                <img src="https://res.cloudinary.com/zi6xga1d/image/upload/v1791297763/detalle.webp" alt="Gifts">
+                <h3 class="product-title">BOUQUETS</h3>
+                <span class="title-underline"></span>
+                <p class="product-price">$85.00</p>
+            </div>
+            <div class="category-card">
+                <img src="https://res.cloudinary.com/zi6xga1d/image/upload/v1791297763/New_Baby.avif" alt="Birthday">
+                <h3 class="product-title">BOUQUETS</h3>
+                <span class="title-underline"></span>
+                <p class="product-price">$85.00</p>
+            </div>
+            <div class="category-card">
+                <img src="https://res.cloudinary.com/zi6xga1d/image/upload/v1791297763/orquideas_elegant.webp"
+                    alt="Sympathy">
+                <h3 class="product-title">BOUQUETS</h3>
+                <span class="title-underline"></span>
+                <p class="product-price">$85.00</p>
+            </div>
+        </section>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
