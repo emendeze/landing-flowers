@@ -23,7 +23,7 @@ img {
 /* 1. Fondo de la pantalla general */
 body {
     background-color: #f8f6f7;
-    background-image: url('https://res.cloudinary.com/zi6xga1d/image/upload/v1791413503/background_Body_2.webp');
+    background-image: url('../imagenes/background_Body_2.webp');
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -188,7 +188,7 @@ body {
 
 /******************** Hero / Container ***************************************/
 .container {
-    background-image: url('https://res.cloudinary.com/zi6xga1d/image/upload/v1791301306/background2.webp');
+    background-image: url('../imagenes/background2.webp');
     background-size: cover;
     background-position: center right;
     background-repeat: no-repeat;
@@ -868,7 +868,7 @@ textarea.form-control {
                 rgba(255, 255, 255, 0.88) 60%,
                 rgba(255, 255, 255, 0.5) 100%
             ),
-            url('https://res.cloudinary.com/zi6xga1d/image/upload/v1791301306/background2.webp');
+            url('../imagenes/background2.webp');
     }
 
     .hero-content {
@@ -1054,7 +1054,7 @@ textarea.form-control {
                 rgba(255, 255, 255, 0.9),
                 rgba(255, 255, 255, 0.9)
             ),
-            url('https://res.cloudinary.com/zi6xga1d/image/upload/v1791301306/background2.webp');
+            url('../imagenes/background2.webp');
     }
 
     .hero-content h1 {
